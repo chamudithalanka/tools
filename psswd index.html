@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="psswd styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        <p>Get a secure and random password. All passwords are securely generated on your device only and are <b>never sent across the internet.</b></p>
+        <div class="generator">
+            <div class="password-box">
+                <input type="text" id="password" readonly>
+                <button id="regenerate-btn">Regenerate</button>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    A-Z (uppercase)
+                </label>
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    a-z (lowercase)
+                </label>
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    0-9
+                </label>
+                <label>
+                    <input type="checkbox" id="symbols">
+                    !@#$%^&*
+                </label>
+                <label>
+                    <input type="checkbox" id="ambiguous">
+                    Avoid ambiguous characters
+                </label>
+            </div>
+            <div class="length">
+                <label for="length">Password length</label>
+                <input type="range" id="length" min="8" max="32" value="16">
+                <span id="length-value">16</span>
+            </div>
+            <button id="generate-multiple-btn">Generate multiple passwords</button>
+        </div>
+    </div>
+    <script src="psswd script.js"></script>
+</body>
+</html>

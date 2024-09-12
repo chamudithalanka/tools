@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Chamuditha Lankathilaka's Website</title>
+
+    <style>
+        /* Search bar styling */
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #search-bar {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <a href="https://github.com/chamudithalanka" class="logo-link">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="logo-img">
+            <span>Chamu</span>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home"><!-- Home --></a>
+        <a href="#band"><!-- Band --></a>
+        <a href="#tour"><!-- Tour --></a>
+        <a href="#contact"><!-- Contact --></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" onkeyup="searchBlog()" placeholder="Search blog articles...">
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- Blog Section -->
+        <div class="blog-section" id="blog-section">
+            <div class="blog-item">
+                <a href="invite.html" target="_blank">
+                    <img src="Image/canva.gif" alt="Blog Thumbnail">
+                    <h2>Canva Premium</h2>
+                </a>
+            </div>
+
+            <div class="blog-item">
+                <a href="colab.html" target="_blank">
+                    <img src="Image/colab.png" alt="Blog Thumbnail">
+                    <h2>Google Compute Engine backend</h2>
+                </a>
+            </div>
+
+            <div class="blog-item">
+                <a href="qr index.html" target="_blank">
+                    <img src="Image/QR Code.gif" alt="Blog Thumbnail">
+                    <h2>QR Code Generator</h2>
+                </a>
+            </div>
+
+            <div class="blog-item">
+                <a href="img edit index.html" target="_blank">
+                    <img src="Image/photo editor.gif" alt="Blog Thumbnail">
+                    <h2>Photo Editor</h2>
+                </a>
+            </div>
+
+            <div class="blog-item">
+                <a href="psswd index.html" target="_blank">
+                    <img src="Image/password.png" alt="Blog Thumbnail">
+                    <h2>Password Generator</h2>
+                </a>
+            </div>
+
+            <div class="blog-item">
+                <a href="https://originalsource2.com" target="_blank">
+                    <img src="https://via.placeholder.com/300x200" alt="Blog Thumbnail">
+                    <h2>New Tools - Coming Soon!</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Chamuditha Lanka's Website. All rights reserved.</p>
+    </div>
+
+    <script>
+        function searchBlog() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const blogItems = document.getElementsByClassName('blog-item');
+
+            for (let i = 0; i < blogItems.length; i++) {
+                let headline = blogItems[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+                if (headline.indexOf(searchTerm) > -1) {
+                    blogItems[i].style.display = "";
+                } else {
+                    blogItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
